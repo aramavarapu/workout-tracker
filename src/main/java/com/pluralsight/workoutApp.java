@@ -25,7 +25,7 @@ public class workoutApp {
                     //addWorkout();
                     break;
                 case "W":
-                    //runWorkoutsScreen();
+                    runWorkoutsScreen();
                     break;
                 case "X":
                     running = false;
@@ -35,4 +35,39 @@ public class workoutApp {
             }
         }
     }
+
+    static void runWorkoutsScreen() {
+        boolean running = true;
+        while (running) {
+            System.out.println();
+            System.out.println("=== Workouts ===");
+            System.out.println("A) All Workouts");
+            System.out.println("Q) Quick Workouts");
+            System.out.println("F) Favorites");
+            System.out.println("S) Search");
+            System.out.println("H) Home");
+            System.out.print("Enter a command: ");
+
+            String command = scanner.nextLine().trim().toUpperCase();
+
+            switch (command) {
+                case "A":
+                    //displayAllWorkouts();
+                    break;
+                case "Q":
+                    //displayQuickWorkouts();
+                    break;
+                case "S":
+                    //runSearchScreen();
+                    break;
+                case "H":
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Error please pick A, Q, F, S, or H");
+            }
+        }
+
+    }
+
 }
