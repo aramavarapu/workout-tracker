@@ -21,9 +21,7 @@ public class workoutApp {
             String command = scanner.nextLine().trim().toUpperCase();
 
             switch (command) {
-                case "N" -> {
-                    //addWorkout();
-                }
+                case "N" -> addWorkout();
                 case "W" -> runWorkoutsScreen();
                 case "X" -> running = false;
                 default -> System.out.println("Error please pick N, W, or X");
@@ -86,6 +84,16 @@ public class workoutApp {
                 default -> System.out.println("Error please pick 1, 2, 3, or 0 ");
             }
         }
+    }
+
+    static void addWorkout() {
+        System.out.print("Name: ");
+        String name = scanner.nextLine().trim();
+        System.out.print("Length in minutes: ");
+        int minutes = Integer.parseInt(scanner.nextLine().trim());
+
+        System.out.println("Added " + name + " (" + minutes + "  minutes)");
+        //pressEnterToContinue();
     }
 
 }
