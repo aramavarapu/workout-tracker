@@ -21,17 +21,12 @@ public class workoutApp {
             String command = scanner.nextLine().trim().toUpperCase();
 
             switch (command) {
-                case "N":
+                case "N" -> {
                     //addWorkout();
-                    break;
-                case "W":
-                    runWorkoutsScreen();
-                    break;
-                case "X":
-                    running = false;
-                    break;
-                default:
-                    System.out.println("Error please pick N, W, or X");
+                }
+                case "W" -> runWorkoutsScreen();
+                case "X" -> running = false;
+                default -> System.out.println("Error please pick N, W, or X");
             }
         }
     }
@@ -51,23 +46,46 @@ public class workoutApp {
             String command = scanner.nextLine().trim().toUpperCase();
 
             switch (command) {
-                case "A":
+                case "A" -> {
                     //displayAllWorkouts();
-                    break;
-                case "Q":
+                }
+                case "Q" -> {
                     //displayQuickWorkouts();
-                    break;
-                case "S":
-                    //runSearchScreen();
-                    break;
-                case "H":
-                    running = false;
-                    break;
-                default:
-                    System.out.println("Error please pick A, Q, F, S, or H");
+                }
+                case "S" -> runSearchScreen();
+                case "H" -> running = false;
+                default -> System.out.println("Error please pick A, Q, F, S, or H");
             }
         }
 
+    }
+    static void runSearchScreen() {
+        boolean running = true;
+        while (running) {
+            System.out.println();
+            System.out.println("=== Search ===");
+            System.out.println("1) By Name");
+            System.out.println("2) By Type");
+            System.out.println("3) By Length");
+            System.out.println("0) Back");
+            System.out.println("Enter a command: ");
+
+            String command = scanner.nextLine().trim();
+
+            switch (command) {
+                case "1" -> {
+                    //searchByName();
+                }
+                case "2" -> {
+                    //searchByType();
+                }
+                case "3" -> {
+                    //searchByLength():
+                }
+                case "0" -> running = false;
+                default -> System.out.println("Error please pick 1, 2, 3, or 0 ");
+            }
+        }
     }
 
 }
